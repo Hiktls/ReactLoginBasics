@@ -62,11 +62,11 @@ app.get('/', function (req, res) {
   res.send("Hello!")
 });
 
-app.listen(80,function(err){
+app.listen(443,function(err){
   if(err){
     console.log(err);
   }
   else{
-    open('http://0.0.0.0:'+'80')
+    open('http://0.0.0.0:'+'443')
   }
 });

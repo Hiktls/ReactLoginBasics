@@ -1,5 +1,8 @@
 {
     "database":{
         "mongoPass":"Mongodb connection here"
+    },
+    "server":{
+        "aws":"Public IPv4 DNS"
     }
 }

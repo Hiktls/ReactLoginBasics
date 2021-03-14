@@ -1,6 +1,7 @@
 import axios from 'axios'; // Importing axios so we can make post request to backend and backend will send the information to database
 import React, { useState } from 'react'
 import './LoginForm.css'
+import config from '../../config.json'
 
 const LoginForm = () => {
 
@@ -17,7 +18,7 @@ const LoginForm = () => {
 
     function handleRegister() {
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailValue)) { // Check if the email is valid using regex
-            axios.post("http://ec2-18-184-216-192.eu-central-1.compute.amazonaws.com/server/login", { 
+            axios.post(config.server.aws + "server/login", { 
                 "email": emailValue,
                 "password": passValue
             }).then(response => {

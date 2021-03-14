@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react' 
 import './SignUpForm.css'
+import config from '../../config.json'
 
 const SignUpForm = () => {
 
@@ -17,7 +18,7 @@ const SignUpForm = () => {
 
     function handleRegister() {
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailValue)) { // Email validation using regex
-            axios.post("http://ec2-18-184-216-192.eu-central-1.compute.amazonaws.com/server/signup", {
+            axios.post(config.server.aws+"server/signup", {
                 "email": emailValue,
                 "password": passValue,
             }).then(response => {
