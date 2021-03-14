@@ -17,7 +17,7 @@ const LoginForm = () => {
 
     function handleRegister() {
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailValue)) { // Check if the email is valid using regex
-            axios.post("http://localhost:8080/server/login", { 
+            axios.post("http://ec2-18-184-216-192.eu-central-1.compute.amazonaws.com/server/login", { 
                 "email": emailValue,
                 "password": passValue
             }).then(response => {
