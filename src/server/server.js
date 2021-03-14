@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const path = require('path');
 const cors = require('cors')
-const config = require('../../config.json');
+const config = require('../config.json');
 
 const app = express();
 const router = express.Router();
@@ -16,7 +16,7 @@ mongoose.connect(config.database.mongoPass,{
   useUnifiedTopology:true
 })
 
-const Data = require('../../models/data')
+const Data = require('../models/data')
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
