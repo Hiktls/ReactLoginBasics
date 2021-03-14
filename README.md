@@ -34,3 +34,6 @@ node server.js
 
 To run the app as process you may want to check [forever package](https://www.npmjs.com/package/forever).
 
+
+# Want to see how it looks?
+### [Testing Website](http://react-login-example.herokuapp.com/)
