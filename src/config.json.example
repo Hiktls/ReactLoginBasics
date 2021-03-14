@@ -1,0 +1,5 @@
+{
+    "database":{
+        "mongoPass":"Mongodb connection here"
+    }
+}

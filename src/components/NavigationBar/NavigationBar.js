@@ -5,7 +5,7 @@ import './NavigationBar.css'
 const NavigationBar = () => {
     const history = useHistory();
 
-    const handleOnClickRouteSignUp = useCallback(() => history.push('/signup'), [history]);
+    const handleOnClickRouteSignUp = useCallback(() => history.push('/signup'), [history]); // Navigation bar routes
     const handleOnClickRouteLogin = useCallback(() => history.push('/login'), [history]);
     const handleOnRouteClickHome = useCallback(() => history.push('/'), [history]);
 
